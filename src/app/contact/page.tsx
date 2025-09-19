@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -28,26 +27,29 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration - you'll need to replace these with your actual IDs
-      const serviceId = 'service_33730vj'; // Your EmailJS service ID
-      const templateId = 'template_ak9q4e9'; // Your EmailJS template ID
-      const publicKey = 'MkfoBME0dtSbymOMy'; // Your EmailJS public key
-
-      // Initialize EmailJS with your public key
-      emailjs.init(publicKey);
-
-      // Send email using EmailJS
-      await emailjs.send(serviceId, templateId, {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_email: 'sharmakartick026@gmail.com',
+      // Formspree endpoint - replace with your actual Formspree form ID
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Contact Form Message from Portfolio',
+          _replyto: formData.email,
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
 
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "", honeypot: "" });
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('Formspree error:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
