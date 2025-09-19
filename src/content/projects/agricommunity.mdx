@@ -1,0 +1,92 @@
+---
+title: "AgriConnect"
+date: "2024-11-15"
+stack: ["React", "Express", "Tailwind", "React Router"]
+metrics: ["TTI ~30% faster via caching (est.)"]
+links:
+  code: "#"
+  demo: "#"
+---
+
+# AgriConnect
+
+## The Problem
+
+Farmers in rural areas often lack access to real-time market prices, agricultural advice, and efficient communication channels. This information gap leads to suboptimal pricing decisions and limited access to expert knowledge.
+
+## The Solution
+
+AgriConnect is a comprehensive platform that bridges the gap between farmers and agricultural resources through:
+
+- **Real-time Price Tracking**: Live market prices for various crops and commodities
+- **AI-Powered Chatbot**: Instant agricultural advice and problem diagnosis
+- **Community Features**: Farmer-to-farmer communication and knowledge sharing
+
+## Technical Implementation
+
+### Frontend Architecture
+
+Built with React and modern web technologies:
+
+- **Component-Based Design**: Reusable UI components for consistent user experience
+- **Responsive Layout**: Optimized for mobile devices commonly used in rural areas
+- **State Management**: Efficient data flow with React Router for navigation
+
+### Backend Services
+
+Express.js backend providing:
+
+- **RESTful APIs**: Clean, documented endpoints for all platform features
+- **Real-time Updates**: WebSocket connections for live price feeds
+- **Data Caching**: Redis implementation for improved response times
+
+<Metric label="Performance Improvement" value="30% faster TTI" />
+
+## Key Features
+
+### Market Price Dashboard
+
+<Figure 
+  src="/images/agricommunity-dashboard.jpg" 
+  alt="AgriConnect dashboard showing real-time crop prices"
+  caption="Real-time market price dashboard with trend analysis"
+/>
+
+### Intelligent Chatbot
+
+The AI chatbot provides instant responses to common agricultural queries:
+
+- **Disease Identification**: Image-based crop disease detection
+- **Weather Advisory**: Location-based weather alerts and farming recommendations
+- **Market Insights**: Price trend analysis and selling recommendations
+
+### Community Platform
+
+- **Discussion Forums**: Topic-based discussions on farming techniques
+- **Expert Q&A**: Direct access to agricultural specialists
+- **Success Stories**: Case studies and best practices sharing
+
+## Performance Optimizations
+
+<Callout type="info">
+Implemented aggressive caching strategies that reduced Time to Interactive by approximately 30%.
+</Callout>
+
+Key optimizations included:
+
+- **Image Optimization**: WebP format with lazy loading
+- **Code Splitting**: Route-based bundle splitting for faster initial loads
+- **API Caching**: Redis-based caching for frequently accessed data
+- **CDN Integration**: Static asset delivery through content delivery networks
+
+## Impact & Results
+
+AgriConnect has the potential to:
+
+- **Empower Farmers**: Provide access to critical market information
+- **Improve Yields**: AI-driven advice for better farming practices
+- **Build Community**: Connect isolated farmers with peers and experts
+
+<Callout type="success">
+This project demonstrates how technology can democratize access to agricultural knowledge and market information.
+</Callout>

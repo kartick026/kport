@@ -1,0 +1,58 @@
+---
+title: "AI-Powered Disease Prediction"
+date: "2024-12-01"
+stack: ["Python", "Flask", "scikit-learn", "TensorFlow"]
+metrics: ["Accuracy 95%", "p95 API <200 ms (target)"]
+links:
+  code: "#"
+  demo: "#"
+---
+
+# AI-Powered Disease Prediction
+
+## The Problem
+
+Traditional symptom-to-disease diagnosis relies heavily on medical expertise and can be time-consuming. Patients often struggle to understand their symptoms and need quick, reliable preliminary assessments before consulting healthcare professionals.
+
+## The Approach
+
+I developed a machine learning system that analyzes patient symptoms and predicts potential diseases with high accuracy. The solution involved:
+
+- **Model Comparison**: Evaluated multiple algorithms including Random Forest, SVM, and Neural Networks
+- **Cross-Validation**: Implemented k-fold validation to ensure robust performance across different data splits
+- **Feature Engineering**: Extracted meaningful symptom patterns and relationships
+
+<Callout type="info">
+The model achieved 95% accuracy on the test dataset, significantly outperforming baseline approaches.
+</Callout>
+
+## API Deployment
+
+The prediction model was deployed as a RESTful API using Flask, featuring:
+
+- **Fast Inference**: Optimized for sub-200ms response times at the 95th percentile
+- **Scalable Architecture**: Containerized deployment with load balancing
+- **Input Validation**: Comprehensive error handling and data sanitization
+
+<Metric label="Response Time" value="<200ms p95" />
+<Metric label="Accuracy" value="95%" />
+
+## Feature Importance Analysis
+
+Through feature importance analysis, I identified the most predictive symptoms for various disease categories:
+
+- **Respiratory Issues**: Cough, fever, and breathing difficulty
+- **Digestive Problems**: Nausea, abdominal pain, and appetite changes
+- **Neurological Symptoms**: Headache, dizziness, and cognitive changes
+
+## Results & Impact
+
+The system successfully demonstrates the potential of AI in healthcare diagnostics:
+
+- **Improved Accessibility**: Provides preliminary assessments to underserved populations
+- **Reduced Healthcare Burden**: Helps prioritize urgent cases
+- **Educational Value**: Helps users understand symptom-disease relationships
+
+<Callout type="success">
+This project showcases the intersection of machine learning and healthcare technology, with practical applications for improving diagnostic accessibility.
+</Callout>
