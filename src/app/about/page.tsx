@@ -42,7 +42,7 @@ export default function AboutPage() {
               <p className="text-muted-foreground leading-relaxed">
                 Hey there! I&apos;m Kartick, a Computer Science Engineering student at VIT Vellore who&apos;s absolutely 
                 obsessed with pushing the boundaries of what&apos;s possible with technology. My journey started 
-                with that classic "how does this actually work?" curiosity, but it&apos;s evolved into something 
+                with that classic &quot;how does this actually work?&quot; curiosity, but it&apos;s evolved into something 
                 way cooler - I&apos;m building immersive experiences that blur the line between reality and digital worlds.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">•</span>
-                    <span><strong>Participant:</strong> DevJams '24 (GDSC), Yantra Central Hack (IEEE-CS), CookOff 9.0 (CodeChef)</span>
+                    <span><strong>Participant:</strong> DevJams &apos;24 (GDSC), Yantra Central Hack (IEEE-CS), CookOff 9.0 (CodeChef)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent mt-1">•</span>
