@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,11 +28,26 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission (replace with actual form service)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // EmailJS configuration - you'll need to replace these with your actual IDs
+      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+
+      // Initialize EmailJS with your public key
+      emailjs.init(publicKey);
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'sharmakartick026@gmail.com',
+      });
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "", honeypot: "" });
-    } catch {
+    } catch (error) {
+      console.error('EmailJS error:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
