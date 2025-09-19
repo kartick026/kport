@@ -29,9 +29,9 @@ export default function ContactPage() {
     
     try {
       // EmailJS configuration - you'll need to replace these with your actual IDs
-      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
-      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+      const serviceId = 'service_33730vj'; // Your EmailJS service ID
+      const templateId = 'template_ak9q4e9'; // Your EmailJS template ID
+      const publicKey = 'MkfoBME0dtSbymOMy'; // Your EmailJS public key
 
       // Initialize EmailJS with your public key
       emailjs.init(publicKey);
